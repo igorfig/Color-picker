@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Seletor de Cores</title>
+  </head>
+  <body>
+    <div id="container">
+        <h1>Seletor de cores</h1>
+        <div class="red">
+          <span id="red-field" class="field">0</span>
+          <input
+            type="range"
+            step="1"
+            value="0"
+            min="0"
+            max="255"
+            id="slider-red"
+            class="slider"
+          />
+        </div>
+        <div class="green">
+          <span id="green-field" class="field">0</span>
+          <input
+            type="range"
+            step="1"
+            value="0"
+            min="0"
+            max="255"
+            id="slider-green"
+            class="slider"
+          />
+        </div>
+        <div class="blue">
+          <span id="blue-field" class="field">0</span>
+          <input
+            type="range"
+            value="0"
+            min="0"
+            step="1"
+            max="255"
+            id="slider-blue"
+            class="slider"
+          />
+        </div>
+
+        <div id="demo-box">
+          <div class="demo"></div>            
+        </div>
+
+        <div class="results">
+          <span class="hexa-label">Hexadecimal:</span>
+          <input 
+          type="text" 
+          readonly
+          value="#000000"
+          id="hexadecimal-output"
+          class="hexadecimal" />
+          
+          <span class="rgb-label">RGB:</span>
+          <input 
+          type="text" 
+          readonly
+          value="rgb(0,0,0)"
+          id="rgb-output"
+          class="rgb"/>
+        </div>
+      
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

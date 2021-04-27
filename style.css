@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFF;
+  
+    --gray-50: #F7F8FA;
+    --gray-100: #E6E8EB;
+    --gray-200: #AFB2B1;
+    --gray-500: #808080;
+    --gray-800: #494D4B;
+  
+    --green-500: #04D361;
+    
+    --purple-300: #9F75FF;
+    --purple-400: #9164FA; 
+    --purple-500: #8257E5;
+    --purple-800: #6F48C9;
+  }
+
+body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+}
+
+
+#container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background:#f53b6c;
+    height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+}
+
+#container h1 {
+    color: var(--white);
+    margin: 0 0 35px 28px;
+    padding: 1.5rem;
+    font-size: 40px;
+}
+
+.red, .green , .blue {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px ;
+    
+}
+
+
+.field {
+    min-width: 20%;
+    text-align: center;
+    outline: none;
+    border: none;
+    
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#demo-box {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.demo {
+    width: 100px;
+    height: 100px; 
+    background : #000;
+    border-radius: 50%;
+    margin-bottom : 20px;
+    margin-left: 50px;
+}
+
+
+.results {
+    padding: 0 1em 0 8rem;
+}
+
+.hexa-label, .rgb-label {
+    font-size: 18px;
+    margin-bottom: 25px;
+    margin-right: 6px;
+}
+
+.red, .green, .blue {
+    width: 40%;
+}
+
+input[type="text"] {
+    display: inline-block;
+    border-radius: 9px;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer
+}
+
+/* Style input range */
+
+input[type="range"] {
+    -webkit-appearance: none;
+    /* background: linear-gradient(to right, red 0%, #ff0 17%, lime 33%, cyan 50%, blue 66%, #f0f 83%, red 100%); */
+    background: #000;
+    outline: none;
+    width: 70%;
+    height: 10px;
+    border-radius: 9px;   
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+
+    background: #fff;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+
+    background: #fff;
+    cursor: pointer;
+}
