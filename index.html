@@ -16,7 +16,7 @@
     <div id="container">
         <h1>Seletor de cores</h1>
         <div class="red">
-          <span id="red-field" class="field">0</span>
+          <span id="red-slider-value" class="slider-value">0</span>
           <input
             type="range"
             step="1"
@@ -28,7 +28,7 @@
           />
         </div>
         <div class="green">
-          <span id="green-field" class="field">0</span>
+          <span id="green-slider-value" class="slider-value">0</span>
           <input
             type="range"
             step="1"
@@ -40,7 +40,7 @@
           />
         </div>
         <div class="blue">
-          <span id="blue-field" class="field">0</span>
+          <span id="blue-slider-value" class="slider-value">0</span>
           <input
             type="range"
             value="0"
@@ -57,21 +57,37 @@
         </div>
 
         <div class="results">
-          <span class="hexa-label">Hexadecimal:</span>
-          <input 
-          type="text" 
-          readonly
-          value="#000000"
-          id="hexadecimal-output"
-          class="hexadecimal" />
+          <label>
+            <input 
+            type="text" 
+            readonly
+            value="#000000"
+            id="hexadecimal-output"
+            class="hexadecimal" />
+            <p>Hexadecimal</p>
+            
+          </label>
+           
+          <label>
+            <input 
+            type="text" 
+            readonly
+            value="0,0,0"
+            id="rgb-output"
+            class="rgb" />
+            <p>RGB</p>
+          </label>
+
+          <label>
+            <input 
+            type="text"
+            readonly
+            value="75, 0%, 0%"
+            id="hsl-output"
+            class="hsl" />
+            <p>HSL</p>
+          </label>
           
-          <span class="rgb-label">RGB:</span>
-          <input 
-          type="text" 
-          readonly
-          value="rgb(0,0,0)"
-          id="rgb-output"
-          class="rgb"/>
         </div>
       
     </div>
