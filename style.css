@@ -29,6 +29,7 @@ body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   color: white;
+  overflowY: scroll;
 }
 
 #container {
@@ -67,6 +68,21 @@ body {
   margin-left: -16px;
   font-size: 20px;
   font-weight: 400;
+}
+
+.randomize-colors {
+  background: #2aa6ee;
+  font-size: 1rem;
+  color: var(--white);
+  padding: 1rem;
+  border-radius: .25rem;
+  cursor: pointer;
+
+  transition: filter .2s;
+}
+
+.randomize-colors:hover {
+  filter: brightness(.9);
 }
 
 #demo-box {

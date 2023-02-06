@@ -140,6 +140,29 @@ sliderBlue.oninput = () => {
 };
 
 
+function handleRandomize() {
+  sliderRed.value = Math.floor(Math.random() * 256);
+  sliderGreen.value = Math.floor(Math.random() * 256);
+  sliderBlue.value = Math.floor(Math.random() * 256);
+
+  sliderRed.style[backgroundProp] = `rgb(${sliderRed.value}, 0, 0)`;
+  sliderGreen.style[backgroundProp] = `rgb(0, ${sliderGreen.value},  0)`;
+  sliderBlue.style[backgroundProp] = `rgb(0, 0 ,${sliderBlue.value})`;
+
+  outputRed.innerHTML = sliderRed.value;
+  outputGreen.innerHTML = sliderGreen.value;
+  outputBlue.innerHTML = sliderBlue.value;
+
+  demo.style[backgroundProp] = `rgb(${sliderRed.value}, ${sliderGreen.value}, ${sliderBlue.value})`
+
+  hexOutput.value = rgbToHex(sliderRed.value, sliderGreen.value, sliderBlue.value).toUpperCase();
+  rgbOutput.value = `${sliderRed.value}, ${sliderGreen.value}, ${sliderRed.value}`;
+  hslOutput.value = rgbToHsl(sliderRed.value, sliderGreen.value, sliderBlue.value);
+}
+
+
+document.querySelector('.randomize-colors').addEventListener('click', handleRandomize);
+
 rgbOutput.addEventListener("click", () => {
   rgbOutput.select();
   document.execCommand("copy");
@@ -147,5 +170,10 @@ rgbOutput.addEventListener("click", () => {
 
 hexOutput.addEventListener("click", () => {
   hexOutput.select();
+  document.execCommand("copy");
+});
+
+hslOutput.addEventListener("click", () => {
+  hslOutput.select();
   document.execCommand("copy");
 });
